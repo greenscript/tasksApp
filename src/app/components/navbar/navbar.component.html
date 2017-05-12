@@ -1,0 +1,12 @@
+<section class="col-xs-12 no-padding">
+  <nav class="navbar navbar-inverse navbar-fixed-top sidebar">
+    <ul class="nav sidebar-nav">
+      <li *ngFor="let link of links; let i = index;">{{ link }} | {{ i }} </li>
+    </ul>
+  </nav>
+  <button class="hamburger is-closed" type="button" name="button">
+    <span class="hamb-top"></span>
+    <span class="hamb-middle"></span>
+    <span class="hamb-bottom"></span>
+  </button>
+</section>
