@@ -1,12 +1,33 @@
-<section class="col-xs-12 no-padding">
-  <nav class="navbar navbar-inverse navbar-fixed-top sidebar">
-    <ul class="nav sidebar-nav">
-      <li *ngFor="let link of links; let i = index;">{{ link }} | {{ i }} </li>
-    </ul>
-  </nav>
-  <button class="hamburger is-closed" type="button" name="button">
-    <span class="hamb-top"></span>
-    <span class="hamb-middle"></span>
-    <span class="hamb-bottom"></span>
-  </button>
-</section>
+<div class="overlay"></div>
+<header class="col-xs-12 no-padding header flex-center">
+  <h1 class="header-title">{{title}}</h1>
+  <form class="navbar-form" role="search">
+    <div class="input-group add-on">
+      <input class="form-control navbar-form-input" placeholder="Search..." name="srch-term" id="srch-term" type="text">
+      <div class="input-group-btn">
+        <button class="btn btn-default navbar-form-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </div>
+  </form>
+  <section class="col-xs-12 no-padding" id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top sidebar" id="sidebar-wrapper">
+      <ul class="nav sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="/">
+             {{title}}
+          </a>
+        </li>
+        <li *ngFor="let link of links; let i = index;">
+          <a href="#">
+            {{ link }} | {{ i }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button (click)="displayNav()" class="hamburger is-closed" type="button" id="hamb" name="button" data-toggle="offcanvas">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+  </section>
+</header>

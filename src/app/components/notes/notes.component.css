@@ -1,0 +1,27 @@
+.notebar-container {
+  padding: 2em 0;
+}
+
+.notebar-title-container {
+  padding: 10px 0;
+}
+
+.notebar-title {
+  border: none;
+  background: rgba(0,0,0,0.04);
+  font-size: 18px;
+  color: #000;
+}
+
+.notebar-title::-webkit-input-placeholder {
+  color: #000;
+}
+
+.notebar-note {
+  border: none;
+  background: rgba(0,0,0,0.04);
+}
+
+.notebar-button {
+  padding: 10px 0;
+}

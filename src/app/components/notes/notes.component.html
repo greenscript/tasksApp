@@ -1,0 +1,21 @@
+<section class="col-xs-12 flex-center no-padding">
+  <form #noteForm="ngForm" class="col-xs-8 notebar-form">
+    <div class="form-group notebar-container">
+      <div class="notebar-title-container">
+        <input  *ngIf="show" name="noteTitle" [(ngModel)]="title" class="form-control notebar-title" type="text" placeholder="Title">
+      </div>
+      <input  (click)="showControls()" name="noteContent" [(ngModel)]="content" class="form-control notebar-note" type="text" placeholder="Create a task...">
+      <div class="notebar-button">
+        <button *ngIf="show" (click)="addNote()" class="btn btn-default" type="button" name="button">Add</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="col-xs-12">
+  <section class="container flex-center">
+    <div *ngFor="let note of notes; let i = index;" class="notes-container">
+      <note-block [title]="note.title" [content]="note.content"></note-block>
+    </div>
+  </section>
+</section>
